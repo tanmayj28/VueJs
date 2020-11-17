@@ -1,0 +1,19 @@
+<html>
+    <head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        <div id="app-2">
+            <span v-bind:title="message">
+              Hover your mouse over me for a few seconds
+              to see my dynamically bound title!
+            </span>
+        </div>
+          <script src="index.js"></script>
+    </body>
+</html>
+
+<!-- 
+Here we are encountering something new. The v-bind attribute you are seeing is called a directive. Directives are prefixed with v- to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here, it is basically saying “keep this element’s title attribute up-to-date with the message property on the Vue instance.”
+If you open up your JavaScript console again and enter app2.message = 'some new message', you’ll once again see that the bound HTML - in this case the title attribute - has been updated. -->
